@@ -11,6 +11,8 @@ No debe pasar nunca un día sin responder, debiendo participar de forma activa.
 Cuando un integrante enfrente un bloqueo deberá comunicarlo a través del grupo en un plazo máximo de 8 horas.
 
 ## Decisiones y conflictos
+Cuando haya que tomar una decisión se deberá someter a votación. 
+Para arreglar posibles conflictos se hablaran entre los integrantes del grupo, si no se llega a un acuerdo se hablara con el profesorado.
 
 ## Calidad
 
