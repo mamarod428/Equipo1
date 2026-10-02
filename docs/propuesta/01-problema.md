@@ -23,3 +23,18 @@
 *   *Objetivos:* Aprobar el gasto rápidamente desde su teléfono móvil y tener un registro de lo acordado.
 *   *Casos de uso principales:* 
     1. Recibir un WhatsApp, abrir la URL del presupuesto, revisar el desglose y pulsar el botón "Aceptar".
+
+
+## 3. Análisis de Competencia
+
+*   *Competidor 1: Holded / Qonto*
+    *   Fortalezas: Ecosistema financiero robusto, control de inventario, contabilidad legal y conciliación bancaria completa.
+    *   Debilidades: Curva de aprendizaje extrema. Interfaz diseñada para administrativos con ratón y teclado. La versión móvil está saturada de menús contables que paralizan al técnico que solo quiere dar un precio.
+*   *Competidor 2: FacturaDirecta / Billin*
+    *   Fortalezas: Muy eficaces para la emisión legal de facturas en Pymes.
+    *   Debilidades: Fricción de entrada inasumible en movilidad. Exigen rellenar una ficha completa de cliente (Nombre, Dirección, NIF, Código Postal) antes de permitir añadir una sola línea de "Mano de obra". Rompen la inmediatez del trabajo de campo.
+*   *Competidor 3: Libreta de papel + WhatsApp*
+    *   Fortalezas: Flexibilidad total, cero coste y cero curva de aprendizaje.
+    *   Debilidades: Descontrol absoluto. El cliente no tiene desglose profesional, los presupuestos se entierran en el historial de chat, los tickets físicos se pierden y no hay vinculación entre el ingreso acordado y el material gastado.
+*   *Oportunidades:* Ninguna app grande está atacando la "fase preventiva y operativa" con una experiencia UX puramente móvil, táctil y asíncrona mediante enlaces web.
+
