@@ -1,5 +1,8 @@
 # Propuesta: Gestor de negocios
 
+*Introducción*
+La digitalización empresarial ha marginado a un sector fundamental: los profesionales de oficios que trabajan a pie de calle. Mientras el mercado desarrolla complejas herramientas de gestión administrativa para entornos de oficina, el técnico autónomo sigue dependiendo del papel, el bolígrafo y la memoria. Esta brecha tecnológica provoca fugas de capital por ventas no cerradas y una carga burocrática inasumible al final de la jornada. Nuestro proyecto nace para resolver este problema mediante el diseño de interfaces (UX): una solución puramente móvil, táctil y de fricción cero, adaptada a la realidad de quien trabaja con las manos y necesita agilidad frente al cliente.
+
 ## 1. Identificación de la necesidad
 *   *El problema:* Los autónomos pierden clientes por el retraso en la elaboración y envío de presupuestos. Además, la perdida constante de justificantes y tickets de compra físicos en papel genera pérdidas económicas al no poder deducir esos gastos.
 *   *A quién afecta:* Autónomos y pequeños negocios de oficios tradicionales (electricistas, fontaneros, reformas, climatización) con baja alfabetización digital y cuya jornada laboral transcurre íntegramente fuera de una oficina.
@@ -38,3 +41,6 @@
     *   Debilidades: Descontrol absoluto. El cliente no tiene desglose profesional, los presupuestos se entierran en el historial de chat, los tickets físicos se pierden y no hay vinculación entre el ingreso acordado y el material gastado.
 *   *Oportunidades:* Ninguna app grande está atacando la "fase preventiva y operativa" con una experiencia UX puramente móvil, táctil y asíncrona mediante enlaces web.
 
+## 4. Propuesta de Valor Única
+
+Al *profesional de oficios tradicionales* le pasa que *pierde ventas por no poder entregar un presupuesto rápido in situ y pierde liquidez al extraviar justificantes físicos de compra. Hoy usa **el clásico bloc de notas o herramientas contables complejas (como Holded o FacturaDirecta), que fallan por **exigir la introducción manual de demasiados datos fiscales, estar diseñadas para ordenador y romper la inmediatez del trabajo de campo. Nosotros le damos **una aplicación web de bolsillo que permite generar presupuestos visuales en tres clics para su aceptación directa vía WhatsApp, y que archiva los gastos al instante utilizando únicamente la cámara del móvil*.
