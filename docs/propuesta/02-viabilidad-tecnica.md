@@ -119,3 +119,5 @@ Utilizaremos MongoDB (mediante Mongoose) alojada en Atlas. El esquema preliminar
 - **Cloudinary:** 25 créditos al mes, donde 1 crédito equivale a 1.000 transformaciones, 1 GB de almacenamiento o 1 GB de ancho de banda. Es suficiente para el MVP.
 
 **Problema del arranque de Render:** el primer acceso tras estar dormido es lento, y nuestro usuario necesita dar un precio rápido. Para evitarlo, la app hará una petición ligera al backend en cuanto el usuario la abra, así el servidor va arrancando mientras elige los iconos. Mientras tanto se mostrará una pantalla de carga clara ("Preparando tu presupuesto...") para que no parezca que la app se ha colgado. Si el proyecto pasara a producción, se contrataría el plan de pago más barato de Render, que no se duerme.
+
+![IMAGEN DIAGRAMA1](../img/diagrama1.jpg)
