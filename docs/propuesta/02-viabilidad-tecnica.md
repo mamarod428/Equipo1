@@ -72,7 +72,36 @@ La app será una web pensada para el móvil, con botones grandes y casi sin tecl
 
 **Sin biblioteca:** la foto del ticket se hace con un `<input type="file" capture>`, que abre la cámara del móvil, y el envío por WhatsApp se hace con un enlace `wa.me`, que abre WhatsApp con el mensaje ya escrito.
 
-### 3.2 Infraestructura
+### 3.2 Backend (Node.js + Express)
+
+El servidor se encargará de exponer una API REST que será consumida por el frontend mediante Axios. La lógica de negocio cubrirá los requisitos de la siguiente manera:
+
+*   **Autenticación y Seguridad (JWT + bcrypt):** Para el inicio de sesión del técnico, usaremos JWT (*JSON Web Tokens*). Al ser *stateless*, el servidor no guarda sesiones; el frontend almacenará el token y lo enviará en cada petición. Las contraseñas se almacenarán encriptadas mediante la librería **bcrypt**.
+*   **Permisos y Roles:**
+    *   **Técnico (Autenticado):** Rutas que requieren validar el JWT. Permite crear presupuestos, subir tickets y listarlos.
+    *   **Cliente (Invitado):** Ruta pública que busca un presupuesto utilizando el parámetro de la URL (el `token_acceso` que lee el frontend). Solo permite lectura y actualizar el estado a "Aceptado/Rechazado".
+*   **Gestión de Ficheros (Multer):** Para que el servidor pueda leer las imágenes que envía el `<input type="file">` del frontend, usaremos el *middleware* **Multer**, diseñado para procesar peticiones `multipart/form-data`.
+*   **Servicios Externos (Cloudinary):** Como los servidores gratuitos eliminan los archivos al reiniciarse, el backend utilizará la API de Cloudinary para alojar las imágenes. El plan gratuito incluye 25 créditos mensuales (1 crédito = 1.000 transformaciones o 1 GB de almacenamiento), garantizando que el MVP funcione sin coste.
+
+### 3.3 Base de Datos (MongoDB)
+
+Utilizaremos MongoDB (mediante Mongoose) alojada en Atlas. El esquema preliminar de las colecciones principales está diseñado estrictamente para cubrir el MVP:
+
+**1. Colección `usuarios`**
+*   *Propósito:* Almacena las credenciales del profesional autónomo.
+*   *Campos:* `_id`, `email`, `password_hash` (encriptada).
+
+**2. Colección `presupuestos`**
+*   *Propósito:* Almacena el documento que se envía al cliente.
+*   *Campos principales:* `_id`, `fecha_creacion`, `conceptos` (Array de objetos `[{ descripcion, precio }]`), `total_presupuesto`, `estado` (Pendiente / Aceptado / Rechazado).
+*   *Campos clave:* `token_acceso` (UUID aleatorio para que el cliente lo abra sin iniciar sesión) y `usuario_id` (Referencia al autor en la colección `usuarios`).
+
+**3. Colección `tickets`**
+*   *Propósito:* Archiva los justificantes de compra y los asocia a un trabajo.
+*   *Campos principales:* `_id`, `fecha_subida`, `importe`, `url_imagen` (La ruta web devuelta por Cloudinary).
+*   *Campos clave:* `usuario_id` (quién lo subió) y `presupuesto_id` (Referencia a `presupuestos` para asociarlo a un trabajo en curso).
+  
+### 3.4 Infraestructura
 
 **¿Dónde desplegamos cada parte?**
 
