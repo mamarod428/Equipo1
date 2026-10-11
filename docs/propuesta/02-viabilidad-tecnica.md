@@ -121,3 +121,49 @@ Utilizaremos MongoDB (mediante Mongoose) alojada en Atlas. El esquema preliminar
 **Problema del arranque de Render:** el primer acceso tras estar dormido es lento, y nuestro usuario necesita dar un precio rápido. Para evitarlo, la app hará una petición ligera al backend en cuanto el usuario la abra, así el servidor va arrancando mientras elige los iconos. Mientras tanto se mostrará una pantalla de carga clara ("Preparando tu presupuesto...") para que no parezca que la app se ha colgado. Si el proyecto pasara a producción, se contrataría el plan de pago más barato de Render, que no se duerme.
 
 ![IMAGEN DIAGRAMA1](../img/diagrama1.jpg)
+
+## 4.Identificación de riesgos técnicos.
+
+La digitalización empresarial ha marginado a un sector fundamental: los profesionales de oficios que trabajan a pie de calle (electricistas, fontaneros, técnicos). Mientras el mercado desarrolla complejas herramientas contables para entornos de oficina, el técnico autónomo sigue perdiendo ventas por no poder dar un presupuesto rápido in situ y perdiendo dinero al extraviar tickets físicos de compra. Nuestro proyecto, "Gestor de Negocios", nace para resolver esta brecha con una solución puramente mobile-first. Proponemos una aplicación web de fricción cero que permite generar presupuestos visuales en tres clics para su envío instantáneo por WhatsApp, y archivar gastos al momento utilizando únicamente la cámara del móvil.
+
+### 4.1. Evaluación de Capacidades del Equipo: Inventario de habilidades
+
+A continuación, se detalla el nivel de experiencia actual de los 4 miembros del equipo en las tecnologías clave del proyecto son: `React`, `Express(Node)`, `MongoDB`, `Git / GitHub` y `Diseño UX`
+
+Tienen buena experiencia con:
+- **Dylan Bauti Huelva:** `React`, `MongoDB` y `Git / GitHub`
+- **Iván Bustamante Mendoza:** `Express(Node)` y `Git / GitHub`
+- **José Luis Yuani Barea:** `Diseño UX`
+- **Manuel Amado Rodríguez:** `React` y `Git / GitHub`
+
+No tienen tanta experiencia con:
+- **Dylan Bauti Huelva:** `Express(Node)` y `Diseño UX`
+- **Iván Bustamante Mendoza:**  `React` y  `MongoDB`
+- **José Luis Yuani Barea:** `React`, `Express(Node)`, `MongoDB` y `Git / GitHub`
+- **Manuel Amado Rodríguez:** `Express(Node)`, `MongoDB` y `Diseño UX`
+
+
+Lagunas de conocimiento (Qué tenemos que aprender):
+Gestión de archivos: Ningún miembro tiene experiencia previa capturando fotografías desde un navegador móvil, enviándolas mediante multipart/form-data al backend (Node/Express) y delegando su almacenamiento a una API externa (Cloudinary).
+
+Estado global en React: Tenemos que aprender a implementar Zustand para mantener los datos del presupuesto guardados mientras el usuario navega entre pantallas.
+
+Gestión del tiempo: El proyecto es realista y viable para el tiempo disponible porque hemos acotado el MVP estrictamente a 6 requisitos (frente a herramientas complejas del mercado). Al eliminar la generación de PDFs y la integración bancaria en esta fase, el núcleo de la aplicación es un CRUD adaptado a móvil, lo cual encaja perfectamente en los plazos del módulo.
+
+### 4.2. Riesgos Técnicos y Mitigación Para garantizar la viabilidad, hemos identificado al menos cinco riesgos técnicos y sus respectivas estrategias de mitigación preventivas:
+
+- **Riesgo:** Bloqueo técnico al intentar implementar la subida de fotos (cámara móvil -> Express -> Cloudinary).
+- **Mitigación:** Repartir la formación. En la primera semana, un miembro del equipo se aislará de la app principal y creará una "prueba de concepto" independiente (solo un HTML básico y Node) para asegurar que sabemos subir una imagen antes de integrarlo en el proyecto real.
+
+- **Riesgo:** Pérdida de trabajo o código roto por conflictos al fusionar (Merge Conflicts).
+- **Mitigación:** Trabajar con flujo de ramas en GitHub (feature-branch). Se bloquea la subida directa a la rama main; todo el código nuevo requiere un Pull Request que debe ser revisado y aprobado por al menos otro compañero antes de unirse.
+
+- **Riesgo:** Problemas de CORS o fallos en producción que no ocurren en local, detectados demasiado tarde.
+- **Mitigación:** Desplegar un "Hola Mundo" end-to-end (Vercel conectado a Render y MongoDB) durante los primeros días de desarrollo para asegurar que la infraestructura base funciona, en lugar de esperar a la última semana para desplegar.
+
+- **Riesgo:** El almacenamiento de Cloudinary se llena o su API deja de ser gratuita.
+- **Mitigación:** Comprimir las imágenes en el frontend antes de enviarlas al servidor (usando bibliotecas ligeras de JS) para consumir menos cuota, y tener localizada una API alternativa para el almacenamiento en la nube.
+
+- **Riesgo:** Falta de tiempo al final del trimestre para terminar todas las funcionalidades diseñadas.
+- **Mitigación:** Priorizar estrictamente el MVP. No se escribirá ni una línea de código de las funcionalidades Should o Could (como el panel de estadísticas o descarga en PDF) hasta que el recorrido principal (login, crear presupuesto, foto de ticket) esté 100% terminado y funcional.
+
