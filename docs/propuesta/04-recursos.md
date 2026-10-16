@@ -26,7 +26,7 @@ El canal principal de comunicación diaria, normas de convivencia y resolución 
 ## 2. La tecnología
 
 ### Stack, servicios y APIs
-El stack técnico MERN (MongoDB, Express, React, Node.js), junto con las bibliotecas auxiliares y sus correspondientes límites en capas gratuitas, están detallados y justificados en [02-viabilidad-tecnica.md](/02-viabilidad-tecnica.md).
+El stack técnico MERN (MongoDB, Express, React, Node.js), junto con las bibliotecas auxiliares y sus correspondientes límites en capas gratuitas, están detallados y justificados en [02-viabilidad-tecnica.md](02-viabilidad-tecnica.md).
 
 ### Herramientas de desarrollo
 
