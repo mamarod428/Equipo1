@@ -73,10 +73,3 @@ Conversión, con un solo clic, de presupuestos aceptados a un PDF descargable.
 ### Exportación de gastos para gestorías
 
 Generación de un archivo comprimido (`.zip`) con todos los tickets de un periodo determinado para enviarlo al gestor.
-
-### PWA (Progressive Web App)
-
-Conversión del proyecto a una PWA para permitir:
-
-- La instalación en la pantalla de inicio del móvil.
-- El soporte fuera de línea (*offline*).
