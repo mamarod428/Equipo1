@@ -1,4 +1,3 @@
-# Recursos
 ## Introducción
 La Fase 4 detalla la organización humana, tecnológica y metodológica del equipo para el desarrollo del proyecto. Define los roles técnicos, el reparto de responsabilidades por módulo de negocio, el herramental de desarrollo normalizado y los flujos de gestión en Git para asegurar una integración continua limpia durante todo el ciclo de vida del software.
 
@@ -26,7 +25,7 @@ El canal principal de comunicación diaria, normas de convivencia y resolución 
 ## 2. La tecnología
 
 ### Stack, servicios y APIs
-El stack técnico MERN (MongoDB, Express, React, Node.js), junto con las bibliotecas auxiliares y sus correspondientes límites en capas gratuitas, están detallados y justificados en [02-viabilidad-tecnica.md](/02-viabilidad-tecnica.md).
+El stack técnico MERN (MongoDB, Express, React, Node.js), junto con las bibliotecas auxiliares y sus correspondientes límites en capas gratuitas, están detallados y justificados en [02-viabilidad-tecnica.md](../02-viabilidad-tecnica.md).
 
 ### Herramientas de desarrollo
 
