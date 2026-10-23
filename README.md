@@ -1,4 +1,4 @@
-#  Gestor de Negocios
+#  Presupuestando
 
 > Aplicación web *mobile-first* de fricción cero para profesionales de oficios tradicionales.
 
