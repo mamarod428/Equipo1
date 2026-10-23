@@ -47,6 +47,7 @@ Desarrollado bajo metodologías ágiles y flujos de trabajo estrictos en git (In
 *Desarrollado para facilitar el día a día de los profesionales que trabajan con las manos.*
 
 ## Tablero de Trabajo
+[Acceso a la documentación del proyecto](https://github.com/users/mamarod428/docs/propuesta.md)
 [Acceso al tablero del proyecto](https://github.com/users/mamarod428/projects/7)
 
 ---
